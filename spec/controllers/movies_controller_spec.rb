@@ -5,7 +5,7 @@ describe MoviesController do
     before :each do
       @m = [mock("Movie"), mock("Movie")]
       @m[0].stub(:id).and_return(1)
-      @m[0].stub(:director).and_return("fake_director")
+      @m[0].stub(:director).and_return("director")
       Movie.stub(:find).and_return(@m[0])
       Movie.stub(:find_by_all_director).and_return(@m)
     end
